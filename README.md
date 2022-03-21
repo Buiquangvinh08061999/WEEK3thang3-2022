@@ -1,1 +1,2 @@
-# WEEK3thang3-2022
+# Modoul 1 WEEK3
+##Array function

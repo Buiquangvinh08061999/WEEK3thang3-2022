@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> Ứng dụng từ điển </h1>
+    <form >
+        <p> Nhập từ tiếng Anh: </p>
+        <input type="text" id="TiengAnh"> <br>
+        <input type="button" value="Translate to Vietnamese" onclick="TraTu()">
+        <p id="TiengViet"></p>
+    </form>
+</body>
+<script>
+    // lấy giá trị về
+    let tiengAnh = ['CAT', 'DOG', 'MOUSE', 'HORSE' ,'PING','LOVE'];
+    let tiengViet = ['Mèo', 'Chó','Chuột', 'Ngựa', 'HE0', 'Yêu'];
+    function TraTu() {
+            let Tu = document.getElementById("TiengAnh").value;
+            let dich = tiengAnh.indexOf(Tu.toUpperCase());
+            
+            if (dich != -1) {
+                document.getElementById("TiengViet").innerHTML = tiengViet[dich];
+            } else {
+                document.getElementById("TiengViet").innerHTML = "Không tìm thấy";
+            }
+        }
+        
+</script>
+</html>

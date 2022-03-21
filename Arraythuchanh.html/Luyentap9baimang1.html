@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Bai1()">Bai 1</button>
+    <button onclick="Bai2()">Bai 2</button>
+    <button onclick="Bai3()">Bai 3</button>
+    <button onclick="Bai4()">Bai 4</button>
+    <button onclick="Bai5()">Bai 5</button>
+    <button onclick="Bai6()">Bai 6</button>
+    <button onclick="Bai7()">Bai 7</button>
+    <button onclick="Bai8()">Bai 8</button>
+    <button onclick="Bai9()">Bai 9</button>
+</body>
+<script>
+    function Bai1(){
+    //  Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. 
+    // Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+    let array = [5,9,6,11,13,14,23,2,10,3];
+    for(i = 0;i<array.length;i++){
+        let item = array[i]
+        if(item >= 10){
+            document.write(item+" ");
+        }
+    }
+    }
+
+    function Bai2(){
+    // Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+    //  Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+    let array = [5,9,6,11,13,14,23,2,10,3];
+    let max = array[0];
+    let vitri =0;
+    
+    for(i = 1; i <array.length;i++){
+        if(array[i]> max){
+            max = array[i]
+            vitri =i
+        }
+    }
+      document.write("Số Max lớn nhất là: " + max + "Vị trí thứ "+ vitri)
+    }
+
+    function Bai3(){
+    // Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó.
+    //  In ra giá trị trung bình của các phần tử trong mảng.
+    let array = [5,9,6,11,13,14,23,2,10,3];
+    let max = array[0];
+    let vitri =0;
+    let tongTB = 0;
+    
+    for(i = 1; i <array.length;i++){
+        if(array[i]> max){
+            max = array[i]
+            vitri =i
+        }
+        tongTB+= array[i]
+    }
+    tongTB = tongTB/array.length;
+      document.write("Số Max lớn nhất là: " + max + "Vị trí thứ"+ vitri + "<br>")
+      document.write("Tổng trung bình là của mảng là:" + tongTB);
+    }
+
+    function Bai4(){
+    // Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+    let mangso = [];
+
+    for(let i=0 ;i<3; i++){
+
+    mangso[i] = Number(prompt("Nhập số vào mảng"))
+ 
+    }
+    document.write("mangso = ["+mangso+"]<br>")
+    document.write("mangso = ["+mangso.reverse()+"]<br>")
+}
+    
+
+    function Bai5(){
+    //Viết chương trình đếm số nguyên âm trong một chuỗi.
+    let mangso =[];
+    let mangsoam =[];
+
+    for(let i =0; i<3;i++){
+        mangso[i] = Number(prompt("Nhập số vào mảng"))
+      
+        if(mangso[i]<0){
+            mangsoam.push(mangso[i])
+        }
+    }
+    document.write("mangso = ["+mangso+"]<br>")
+    document.write("Mảng các số âm gồm "+mangsoam.length +" phần tử mangsoam = ["+mangsoam+"]<br>")
+    }
+
+
+    function Bai6(){
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+    //nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không?
+    // Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+    let mang = [], boo = true
+    for (let i = 0; i < 3; i++) {
+        mang[i] = prompt("Nhập số vào mảng")
+        if(mang[i] == "V"){
+            boo =false
+        }
+    }
+    document.write("Mang = ["+mang+"]<br>")
+    if(boo == false){
+        document.write("V is in the array")
+    }else{
+        document.write("V is not in the array")
+    }
+}
+
+
+    function Bai8(){
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. 
+    //Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+    let mang=[]
+    let min =0
+
+    for(let i = 0; i<3;i++){
+        mang[i] = Number(prompt("Nhập số vào mảng"))
+    }
+    document.write("Mang = ["+mang+"]<br>")
+    for(let i = 0; i<mang.length-1;i++){
+        for(let j=i+1; j<mang.length; j++){
+            if(mang[i] <mang[j]){
+                min = mang[i];
+                mang[i] = mang[j]
+                mang[j] = min
+            }
+        }
+    }
+    document.write("Xắp xếp từ lớn tới bé Mang = ["+mang+"]<br>")
+    }
+
+    function Bai9(){
+    //Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. 
+    //Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+    let mang1=[], mang2=[], mang3=[];
+    for(let i = 0; i < 5;i++){
+        let a = Number(prompt("Nhap vao mang 1"));
+        mang1.push(a)
+    }
+    for(let j = 0; j < 5;j++){
+        let b = Number(prompt("Nhap vao mang 2"));
+        mang2.push(b)
+    }
+    document.write("Mang 1 = ["+mang1+"] <br>")
+    document.write("Mang 2 = ["+mang2+"] <br>")
+   
+    mang3=mang1;
+    for(let i = 0; i<mang2.length; i++){
+        mang3.push(mang2[i])
+    }
+    document.write("Mang 3 la = ["+mang3+"]<br>")
+
+    }
+</script>
+</html>

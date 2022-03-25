@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="alertMessage()">
+    
+</body>
+<script>
+    // Bài 1
+    function alertMessage() {
+        let bai1 = alert("xin chao")
+        return bai1;
+    }
+
+    // // Bài 2
+
+    function Number(a) {
+        a++;
+        return a;
+    }
+    let tongso = Number(5);
+    console.log("Tong so la: " + tongso)
+
+
+
+    // Bai 3 tinh tong;
+    function numberBai3(a, b) {
+        if (a > b) {
+            alert("Gia tri a > b");
+        }
+        return a + b
+    }
+    let a = Number(prompt("Nhập số a"));
+    let b = Number(prompt("Nhập số b"));
+    console.log("Tổng của" + a + " + " + b + " = " + numberBai3(a, b));
+
+
+    // Bai 4.
+    function addNumbers() {
+        firstNum = 10;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+    let result1 = addNumbers();
+    alert("Show all = "+result1);
+
+
+    // Bài hay, gán giá trị tham số vào Function, ghi chép lại
+//     function ham1(size, min, max) {
+//         let arr = [];
+//         for (let i = 0; i < size; i++) {
+//             arr[i] = Math.floor(Math.random() * (max - min + 1) + min);
+//         }
+//         return (arr);
+//     }
+//     let arr = ham1(5, 1, 9);
+//    console.log(arr);
+
+   // tính tổng của hàm trên,  (áp dụng vs số chẳn lẻ, )
+//    let total = arr.reduce(function(prev, value){
+//        return prev + value;
+//    })
+//    console.log("tổng là: " + total);
+   
+function ngoiSao(){
+let sao1 = ["polaris", "pldebaran", "deneb", "vega", "altair", "dubhe", "regulus"]
+let sao2 = ["ursa minor", "tarurus", "cygnus", "lyra", "aquila", "ursa major", "leo"]
+let str = prompt("nhap sao1");
+for(let i = 0; i < sao1.length ; i++){
+    if(sao1[i] == str.toLowerCase()) {
+        return sao2[i];
+    }
+}
+return false;
+}
+
+console.log(ngoiSao());
+</script>
+
+</html>

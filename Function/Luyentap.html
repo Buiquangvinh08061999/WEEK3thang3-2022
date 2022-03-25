@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Bình phương của: <input type="text" id="input" oninput="demo1()"> là: <span id="result"></span>
+</body>
+<script>
+    // Cách sử dụng hàm
+    // Truyền vào 1 tham số.
+//     function sum(number){
+//       let result = number*number;
+//       return result;
+//    }
+//    let binhphuong2 = sum(4);
+//    document.write("Gia tri la: " + binhphuong2)
+
+
+   function sum(number){
+      let result = number*number;
+      return result;
+   }
+   
+   function demo1(){
+       let nhapvao = document.getElementById("input").value;
+       let truyenvao = sum(nhapvao);
+       document.getElementById("result").innerHTML = truyenvao;
+   }
+  
+
+
+
+
+
+</script>
+</html>

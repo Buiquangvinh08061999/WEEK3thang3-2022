@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bai1()">Bai 1</button>
+    <button onclick="bai2()">Bai 2</button>
+</body>
+<script>
+    //Bài 1 chuyển Feet sang Meter
+    function footToMeter(feet){
+      let meter = 0.305 * feet
+      document.write("Giá trị quy đổi: " + feet + " foot qua meter la: " + meter);
+    }
+    function bai1(){
+    let feet = Number(prompt("Nhập vào giá trị foot muốn đổi qua meter:"))
+    let meter = footToMeter(feet);
+    }
+
+
+
+    //Bài 2 chuyền Meter sang Feet;
+    function footToMeter(meter){
+      let foot= 3.279 * meter
+      document.write("Giá trị quy đổi: " + meter + " meter qua foot la: " + foot );
+    }
+    function bai2(){
+    let meter = Number(prompt("Nhập vào giá trị foot muốn đổi qua meter:"))
+    let foot = footToMeter(meter);
+    }
+
+
+
+</script>
+</html>

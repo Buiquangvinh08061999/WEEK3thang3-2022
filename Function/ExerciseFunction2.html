@@ -10,8 +10,10 @@
     <button onclick="bai1()">Bài 1 Tính bình phương</button>
     <button onclick="bai2()">Bài 2 tính diện tích + chu vi hình tròn</button>
     <button onclick="bai3()">Bài 3 tính giai thừa</button>
+    <button onclick="bai4()">Bài 4 kiểm tra số hay chuỗi</button>
     <button onclick="bai5()">Bài 5 tìm số nhỏ nhất</button>
     <button onclick="bai6()">Bài 6 số nguyên dương</button>
+    <button onclick="bai7()">Bài 7 đổi 2 số nguyên bất kì</button>
 </body>
 <script>
     //Bài 1:Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
@@ -45,7 +47,6 @@
         document.write(" Chu vi hình tròn là: "+chuvi+ "Cm"+"<br>")
     }
 
-
     //Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
     
     function giaiThua(so){
@@ -69,24 +70,14 @@
      
     //Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. 
     // Nếu là ký tự số hàm trả về true, ngược lại trả về false
-    
-    let number = Number(prompt("Nhập vào 1 số"))
-    function kiemtra(){
-        check = true
+
+    function bai4(){
+    let number = prompt('nhập vào một kí tự: ')
+        function checkNumber(number) {
+            return !isNaN(number)
+        }
+        alert(checkNumber(number));
     }
-    
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
@@ -121,7 +112,18 @@
     let ketqua = soNguyenDuong(number);
     console.log("Số nguyên dương là : " + ketqua);
     }    
-
+    
+    //Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+    function bai7() {
+        let so_a = prompt("Nhập số thứ nhất")
+        let so_b = prompt("Nhập số thứ hai")
+        let ketqua = doiCho2So(so_a,so_b)
+        document.write("Đổi chỗ 2 số: "+ketqua[0] +" , "+ketqua[1])
+    }
+    function doiCho2So(so_a, so_b) {      
+        let doiso=[so_b,so_a]
+        return doiso
+    }
 
 
 </script>

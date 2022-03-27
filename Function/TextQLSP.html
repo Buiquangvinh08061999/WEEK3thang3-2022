@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input"> <button onclick="addProduct()">Add</button>
+    
+    <button onclick="showProDuct1()">Show Products</button>
+
+    <div id="result"></div>
+    
+</body>
+<script>
+   let products = ['Nokia' ,'Samsung', 'Iphon6 plus', 'S20 Unltra' , 'Oppo']
+   function showProDuct1(){
+       let productsMap = products.map(
+           function (value,index){
+               return `<tr><td>${value}</td><td><button onclick='editProduct(${index})'>Edit</button></td>
+                <td><button onclick="saveProduct(${index})">Save</button></td>
+                <td><button onclick="deleteProduct(${index})">Delete</button></td>
+                </tr>`
+           }
+       );
+       let str = `<table border='1'>${productsMap.join("")}</table>`
+       let valueResult = document.getElementById("result")
+       valueResult.innerHTML = str;
+   }
+
+   function addProduct(){
+       let valueInPut = document.getElementById("input").value;
+       products.unshift(valueInPut);
+       showProDuct1();
+   }
+
+   function editProduct(index){
+       let valueIndex = document.getElementById("input");
+       valueIndex.value =products[index];
+   }
+   function saveProduct(index){
+       let valueIndex =document.getElementById("input");
+       Save= valueIndex.value 
+       products[index] =Save
+       showProDuct1();
+   }
+   function deleteProduct(index){
+    products.splice(index, 1);
+    showProDuct1();
+   }
+
+</script>
+<!-- <table>
+    <tr>
+        <td>Sony</td>
+    </tr>
+    <tr>
+        <td>Samsung</td>
+    </tr>
+    <tr>
+        <td>Nokia</td>
+    </tr>
+    <tr>
+        <td>Appe</td>
+    </tr>
+    <tr>
+        <td>Xaomi</td>
+    </tr>
+    <tr>
+        <td>1280</td>
+    </tr>
+</table> -->
+</html>

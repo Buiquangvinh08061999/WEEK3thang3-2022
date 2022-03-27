@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input"> 
+    <button onclick="addProduct()">Add</button>
+  
+    <button onclick="showProDuct3()">Show Products</button>
+    
+    <div id="result">
+
+    </div>
+</body> 
+<script>
+
+    let products = ['Sony','Samsung','Nokia','Xiaomi','Iphon6 plus'];
+
+
+    // Bài CƠ BẢN
+    function showProDuct1(){
+    let producsMap = products.map(
+          function(value, index){
+              return `<tr><td>${value}</td></tr>`;
+          }
+    );
+    let str = `<table>${producsMap.join("")}</table>`;
+    let luubien = document.getElementById("result");
+    luubien.innerHTML =str;
+ }
+
+
+    function addProduct(){
+        let valueText = document.getElementById("input").value;
+        products.unshift(valueText);
+
+        showProDuct1(); //Gọi lại để hiển thị add vừa thêm.
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    //Bài NÂNG CẤP 
+    function showProDuct3(){
+    let producsMap = products.map(
+          function(value, index){
+              return `<tr><td>${value}</td><td><button>Edit</button></td></tr>`;
+          }
+    );
+    let str = `<table border='1'>${producsMap.join("")}</table>`;
+    let luubien = document.getElementById("result");
+    luubien.innerHTML =str;
+     
+ }
+
+ function addProduct(){
+        let valueText = document.getElementById("input").value;
+        products.unshift(valueText);
+
+        showProDuct3(); //Gọi lại để hiển thị add vừa thêm. 
+    }
+
+
+
+
+
+
+    
+</script>
+<!-- <table>
+    <tr>
+        <td>Sony</td>
+    </tr>
+    <tr>
+        <td>Samsung</td>
+    </tr>
+    <tr>
+        <td>Nokia</td>
+    </tr>
+    <tr>
+        <td>Appe</td>
+    </tr>
+    <tr>
+        <td>Xaomi</td>
+    </tr>
+    <tr>
+        <td>1280</td>
+    </tr>
+</table> -->
+</html>

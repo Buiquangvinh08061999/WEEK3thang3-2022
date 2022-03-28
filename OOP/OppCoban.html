@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Khai Báo đối tượng cách 1
+    //Cách khai báo Opp cơ bản, khai báo trực tiếp.
+    function Student(id , name , address){
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.getInfor = function(){
+            return `Id=${id} Name=${name} Address=${address}`;
+        }
+    }
+    let printResult = new Student(1, "BQV" ,"HN");
+    console.log(printResult.getInfor());
+
+
+
+    //Khai Báo đối tượng cách 2
+    //Cách khai báo Opp cơ bản, khai báo trực tiếp
+    let xeMay = new function() {
+    this.name = ["Exciter","AB"]
+    this.color = ["Red","Blue"]
+    this.money ="50.000.000 VNĐ"
+    this.getInfo = function () {
+        return `Xe máy ${this.name[1]} Màu ${this.color[0]} giá ${this.money}`
+    };
+}
+xeMay.color[1] = "Black";
+alert(xeMay.getInfo());
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+</body>
+<script>
+    //   let c = document.getElementById("myCanvas")
+    //   let ctx = c.getContext("2d")
+    //   ctx.moveTo(10,5);
+    //   ctx.lineTo(200,100);
+    //   ctx.stroke();
+
+    //   let c = document.getElementById("myCanvas")
+    //   let ctx = c.getContext("2d")
+    //   ctx.beginPath();
+    //   ctx.arc(95,50,40,0,2*Math.PI);
+    //   ctx.stroke();
+// Vẽ màu Canvas.
+let c = document.getElementById("myCanvas");
+let ctx = c.getContext("2d");
+// Create gradient
+let a = ctx.createLinearGradient(0,0,200,0);
+a.addColorStop(0,"red");
+a.addColorStop(1,"white");
+// Fill with gradient
+ctx.fillStyle = a;
+ctx.fillRect(10,10,150,80);
+
+
+
+
+      
+</script>
+</html>

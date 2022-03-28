@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Tải sử dụng nhiều lần. thay đổi day month year tùy ý khi thêm hàm mới
+    let myDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.toString = function() {
+            return `${this.day}/${this.month}/${this.year}`;
+        }
+
+        
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+        this.toString = function() {
+            return `${this.day}/${this.month}/${this.year}`;
+        }
+    }
+    let date = new myDate(10, 2, 2007); 
+    alert(date.toString());
+
+
+
+    date.setDay(8);
+    date.setMonth(6);
+    date.setYear(1999);
+    alert(date.toString());
+
+
+    // tái sử dụng nhiều lần cho hướng đối tượng;
+    date.setDay(11);
+    date.setMonth(6);
+    date.setYear(1999);
+    alert(date.toString());
+
+
+    
+</script>
+
+</html>

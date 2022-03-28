@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Truy suất các vị trị ra và hiển thị;
+   let person = {
+   name: ['Vinh', 'Top'],
+   age: 20,
+   gender: 'made',
+   interests: ['music', 'code'],
+   soThich1: function(){
+       alert(`Tôi là ${this.name[0]} Sở thích của tôi là ${this.interests[1]} ${this.age} tuổi`)
+   },
+   soThich2: function(){
+       alert(`Tôi là ${this.name[1]} Sở thích của tôi là ${this.interests[0]} ${this.age} tuổi`)
+   }
+ };
+ person.soThich1();
+ person.soThich2();
+ 
+ 
+</script>
+</html>

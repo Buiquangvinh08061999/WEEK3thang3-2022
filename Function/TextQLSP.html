@@ -12,7 +12,7 @@
     <div id="Result"></div>
 </body>
 <script>
-    let products = ['Nokia', 'Samsung','Galaxy', 'Iphon 6' ];
+    let products = ['Nokia', 'Samsung','Galaxy', 'Iphone 6' ];
     function showProducts1(){
         let productsMap = products.map(
             function(value, index){
@@ -31,6 +31,7 @@
         let valueAdd = document.getElementById("input").value;
         products.unshift(valueAdd);
         showProducts1();
+        document.getElementById("input").value = ("")
     }
 
     function EditProduct(index){
@@ -42,7 +43,8 @@
         let valueSave = document.getElementById("input");
         Save = valueSave.value;
         products[index] = Save;
-        showProducts1();
+        showProducts1();   
+                 
     }
 
     function DeleteProduct(index){

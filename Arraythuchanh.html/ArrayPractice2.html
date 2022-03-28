@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bai1()">Bài 1</button>
+    <button onclick="bai2()">Bài 2</button>
+    <button onclick="bai3()">Bài 3</button>
+    <button onclick="bai4()">Bài 4</button>
+    <button onclick="bai5()">Bài 5</button>
+</body>
+<script>
+        function bai1(){
+        let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    for(let i in a)
+    {
+        console.log("row" + i);
+        for( let j in a[i])
+        {
+        console.log(" " + a[i][j]);
+        }
+    }
+    }
+
+    function bai2() {
+        // Dung Hàm sort để đảo ngược lại mảng;
+        let arr = ['c', 's', 'c', '2', '6', '1']
+        let text = arr.sort();
+        console.log("Mảng đảo ngược là " + text);
+
+    }
+
+    function bai3(){
+       //Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. 
+       //Chương trình này đếm số ký tự số trong mảng. 
+       //Bài hay: duyệt phần tử kiểu SỐ trong chuỗi ra 
+       let arr = ['a','b','c',1,2,'n','t',4,8,0,10];
+       let count=0
+       for(let i = 0; i <=arr.length;i++){
+           if(typeof arr[i] == 'number'){
+               count++;
+           }  
+       }
+       document.write("phần tử kiểu số nằm trong mảng là: " + count)
+    }
+
+    function bai4(){
+       //Viết một chương trình để đếm số từ trong một chuỗi
+       //Bài hay: duyệt phần tử kiểu CHUỖI trong chuỗi ra .
+       let arr = ['a','b','c',1,2,'n','t',4,8,0,10];
+       let count=0
+       for(let i = 0; i <=arr.length;i++){
+           if(typeof arr[i] == 'string'){
+               count++;
+           }  
+       }
+       document.write("phần tử kiểu chuỗi nằm trong mảng là: " + count)
+    }
+
+    function bai5(){
+        let arr = ['u','k','j','p','o',4];
+        let arr1 = ['b','c','c',1,'n','t',4,0,54,5,3,2,'u'];
+        for(let i = 0; i<= arr.length;i++){
+            for(let j = 0 ; j <= arr1.length; j++){
+                if(arr[i] == arr1[j]){
+                    console.log("2 phần tử giống nhau");
+                    break;
+                }else{
+                    console.log("2 phần tử khác nhau");
+                    break;
+                }
+            }
+        }  
+    }
+    
+    
+</script>
+
+</html>

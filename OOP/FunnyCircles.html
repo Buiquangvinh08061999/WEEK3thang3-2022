@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+
+</body>
+<script>
+    function Circle(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+
+    //Bước 2 : Vẽ hình tròn
+    // function createCircle(){
+    //     let ctx = document.getElementById("myCanvas").getContext("2d");
+    //     let circle = new Circle (500, 500,80);
+    //     ctx.beginPath();
+    //     ctx.arc(circle.x, circle.y, circle.radius, 0 , 2 * Math.PI);
+    //     ctx.fill();
+    // }
+    // createCircle();
+
+
+    //Bước 3: Hình tròn bán kính ngẫu nhiên
+    // function createCircle(){
+    //     let ctx =document.getElementById("myCanvas").getContext("2d")
+    //     let radius = Math.floor(Math.random() * 500);
+    //     let circle = new Circle(500,500, radius)
+    //     ctx.beginPath();
+    //     ctx.arc(circle.x, circle.y, circle.radius, 0 , 2 * Math.PI);
+    //     ctx.fill();
+    // }
+    // createCircle();
+
+    //Bước 4: Hình tròn màu ngẫu nhiên
+    function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+    }
+    function getRandomColor() {
+        var red = getRandomHex();
+        var green = getRandomHex();
+        var blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+    }
+    function createCircle() {
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var radius = Math.floor(Math.random() * 500);
+        var color = getRandomColor();
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        var circle = new Circle(x, y, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+    //Bước này gọi lại hàm createCircle 30 lần thay vì 1 lần rất hay
+    function vongLapcreateCircle(){
+		for(var i = 0; i < 30; i++){
+    	createCircle();
+    }
+}
+vongLapcreateCircle();
+
+
+
+</script>
+
+
+</html>

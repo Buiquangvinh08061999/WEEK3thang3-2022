@@ -16,18 +16,19 @@
     // Có thể gán trực tiếp 3,14 vào PI.
     //Cách 1 cơ bản
     function cach1tinhdientichhinhtron() {
+        //Khai báo đối tượng
         let Cirle = {
             radius: 2,
             getArea: function (PI) {
-                console.log("Thực hiện tính diện tích");
                 return this.radius * this.radius * PI
             }
-        }
+       } 
         alert(Cirle.getArea(3.14));
     }
 
     //Cách 2 nâng cao
     function cach2tinhdientichhinhtron() {
+
         let Circle = function (radius) {
             this.radius = radius;
             this.getArea = function () {
@@ -41,37 +42,6 @@
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 </script>
 
 </html>

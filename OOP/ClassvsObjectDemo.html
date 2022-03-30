@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Nắm kĩ để làm các bài sau:
+    //Xây dựng phương thức gửi tin nhắn cơ bản
+    function Mobile(id, name){
+        this.id = id;
+        this.name = name;
+        this.message = "";
+        this.setMessage = function(message){
+            this.message = message;
+        }
+        this.getMessage = function(){
+            return this.message
+        }
+        this.sendMessage = function(message, mobile){
+            mobile.setMessage(message)
+        }
+    }
+    let iphone = new Mobile(1, "Iphone")
+    let aroid = new Mobile(2,"Sam Sung")
+    iphone.sendMessage("Helo bạn message Từ Iphone sang Aroid",aroid)
+   
+    let message = aroid.getMessage() // Kiểm tra đối tượng aroid
+    console.log(message);
+
+
+</script>
+</html>

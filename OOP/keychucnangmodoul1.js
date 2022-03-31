@@ -3,7 +3,7 @@
 let kiemtraButton = document.querySelectorAll("button")
 // console.log(kiemtraButton);
 // -------------------------------------------- 
-// Bước 2:Gọi lại biến btn vừa khai báo:, dùng hàm forEach để lấy giá trị và vị trí từ thẻ (btn)button ra,
+// Bước 2:Gọi lại biến kiemtraButton vừa khai báo:, dùng hàm forEach để lấy giá trị và vị trí từ thẻ (kiemtraButton)button ra,
 // +1:button.addEventListener("click",function(event) {
 // +2:let btnItem = event.target =>:Khi chúng ta Click vào phải chọn đúng phần tử dùng even.target
 // +3:let product =btnItem.parentElement: Đã truy suất ra thẻ div boxAnhtong là thẻ cha parentElement
@@ -87,27 +87,36 @@ function carttotol(){
     //+Khởi tạo biến timStrong gán giá trị vào TotalTong, thẻ strong sẽ hiện ra theo tổng tiền
     let timStrong = document.querySelector(".price-total strong")
     timStrong.innerHTML =TotalTong
+
+    inputchange();
 }
 //----------------------PHẦN 4:Sử dụng nút delêt(xóa): dùng hàm remove để delete sản phẩm mình kích vào---------------
+//Các nút kích vào điều sử dụng sự kiện, và gọi hàm: let goibienDeLeTe = document.querySelectorAll("i"),
+// goibienDeLeTe[i].addEventListener("click", function(event){}
 function deleteCart(){
     let  DeLeTe= document.querySelectorAll("tbody tr")
     for(let i=0; i<DeLeTe.length;i++){
-
         let goibienDeLeTe = document.querySelectorAll("i")
         goibienDeLeTe[i].addEventListener("click", function(event){
             let btnDeleTe = event.target
             let truyenduLieu = btnDeleTe.parentElement.parentElement
             truyenduLieu.remove()
           
-          
-          
-          
-          
-
 
             //Khi xóa xong: gọi lại hàm carttotol(): Để tính lại giá trị tiền
             carttotol()
         })
         
+    }
+}
+//-----------------------PHẦN 5:Sử dụng nút hàm gọi tới nút input để cho phép tăng giá trị, và gọi lại hàm carttotol(), để tính toán lại
+//Truyền hàm: inputchange() lên hàm:carttotol() lại
+function inputchange(){
+    let  Input= document.querySelectorAll("tbody tr")
+    for(let i=0; i<Input.length;i++){
+        let goibienInput =Input[i].querySelector("input");
+        goibienInput.addEventListener("click",function(){
+            carttotol()
+        })
     }
 }

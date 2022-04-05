@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Chuyển độ C sang độ Fahrenhit
+    //Chuyển độ C sang độ Kenvin
+    //CHú ý hàm gọi lại ở dòng 28, 29;
+    let Temparature = function(C){
+        this.C = C;
+
+        this.convertToFahrenhit = function(){
+             alert(`Temparature after convert là: ${this.C*9/5+32}°F `)
+        }
+        
+        this.convertToKenVin = function(){
+             alert(`Temparature after convert là: ${this.C+273.15}°K`)   
+        }
+    };
+    let newTemparature = new Temparature(25);
+    newTemparature.convertToFahrenhit();
+    newTemparature.convertToKenVin();
+</script>
+</html>
